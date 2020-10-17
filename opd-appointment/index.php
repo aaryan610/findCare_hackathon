@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     //Must Include Files
         include('../include/functions.inc.php');
 
@@ -17,7 +19,8 @@
 
             //Confirm Insertion
                 if($insert) {
-                    header("Location: ./");
+                    $_SESSION['key'] = mysqli_insert_id($con);
+                    header("Location: ./successful/");
                     die();
                 } else {
                     echo "Unsuccessful";

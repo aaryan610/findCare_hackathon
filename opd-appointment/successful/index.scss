@@ -1,0 +1,55 @@
+@import "../../assets/css/variables";
+
+.table-container {
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  border: 1px solid #000;
+  width: 60vw;
+  margin: 4em auto;
+  padding: 30px 10px;
+  border-radius: 20px;
+  overflow: auto;
+
+  .action-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 0.5em;
+    margin-top: 2em;
+
+    button {
+      background-color: $primary-green;
+      color: #fff;
+      border: none;
+      padding: 15px 45px;
+      border-radius: 2px;
+      cursor: pointer;
+      outline: none;
+      font-size: 1em;
+      width: 250px;
+    }
+  }
+
+  table {
+    margin-top: 2em;
+
+    tbody {
+      tr {
+        td {
+          padding: 10px 45px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .table-container {
+    width: 90vw;
+
+    .action-buttons {
+      grid-template-columns: 1fr;
+      grid-row-gap: 0.5em;
+    }
+  }
+}
