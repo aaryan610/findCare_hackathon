@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto&display=swap");
+@import "./variables.scss";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: $body-font;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+//helper classes
+.flex {
+  display: flex;
+
+  &-jc-c {
+    justify-content: center;
+  }
+  &-ai-c {
+    align-items: center;
+  }
+}

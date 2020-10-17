@@ -1,0 +1,62 @@
+.input-group {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 1em 0;
+
+  &.half {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1em;
+  }
+
+  select {
+    font-size: 1em;
+    margin: 2em 0 0;
+    border: none;
+    border-bottom: 2px solid #000;
+    cursor: pointer;
+    padding: 30px 10px 10px;
+    outline: none;
+  }
+
+  input {
+    background-color: inherit;
+    color: #000;
+    font-size: 1em;
+    padding: 30px 10px 10px;
+    border: none;
+    border-bottom: 2px solid darkgray;
+    outline: none;
+    transition: 0.4s all ease;
+
+    &::placeholder {
+      opacity: 0;
+    }
+
+    &:focus,
+    &:not(:placeholder-shown) {
+      border-bottom: 2px solid #000;
+    }
+
+    &:focus ~ label,
+    &:not(:placeholder-shown) ~ label {
+      transform: translate(10px, -35px) scale(0.9);
+      padding: 0;
+      color: #000;
+    }
+  }
+
+  label {
+    position: absolute;
+    padding-left: 10px;
+    margin-bottom: 2px;
+    color: darkgray;
+    cursor: pointer;
+    transform: translate(4px, -14px) scale(1.02);
+    transform-origin: left top;
+    font-family: "Poppins";
+    text-transform: uppercase;
+    font-weight: normal;
+    transition: 0.4s all ease;
+  }
+}

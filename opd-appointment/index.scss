@@ -1,0 +1,109 @@
+@import "../assets/css/variables";
+
+.time-slots {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  grid-gap: 1em;
+
+  .slot {
+    position: relative;
+    height: 100px;
+    width: 200px;
+    border-radius: 5px;
+    padding: 10px;
+
+    &.available {
+      background-color: $primary-green;
+      color: #1b4228;
+      cursor: pointer;
+    }
+
+    &.unavailable {
+      background-color: #990011;
+      color: #fff;
+      box-shadow: inset 12px 12px 19px #87000f, inset -12px -12px 19px #ab0013;
+      pointer-events: none;
+    }
+
+    &.break {
+      background-color: #fd6a02;
+      color: #fff;
+      box-shadow: inset 12px 12px 19px #df5d02, inset -12px -12px 19px #ff7702;
+      pointer-events: none;
+    }
+
+    .time {
+      font-size: 1.4em;
+    }
+
+    button {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: none;
+      color: #fff;
+      border: 1px solid #fff;
+      border-radius: 4px;
+      padding: 5px 10px;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .time-slots {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .time-slots {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.form-wrapper {
+  position: relative;
+
+  .form {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-items: center;
+    opacity: 0;
+    pointer-events: none;
+
+    &.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .form-img {
+      img {
+        height: 400px;
+        width: 560px;
+      }
+    }
+
+    .form-content {
+      width: 60%;
+
+      button {
+        font-size: 1em;
+        background-color: $primary-green;
+        border: none;
+        border-radius: 2px;
+        color: #fff;
+        width: 100%;
+        padding: 15px 45px;
+        cursor: pointer;
+        outline: none;
+      }
+    }
+  }
+}
