@@ -17,28 +17,32 @@
 
 .time-slots .slot.available {
   background-color: #09dca4;
-  color: #1b4228;
+  color: #034936;
   cursor: pointer;
 }
 
+.time-slots .slot.available:hover {
+  background-color: #22f6be;
+}
+
 .time-slots .slot.unavailable {
-  background-color: #990011;
+  background-color: #e0283d;
   color: #fff;
-  -webkit-box-shadow: inset 12px 12px 19px #87000f, inset -12px -12px 19px #ab0013;
-          box-shadow: inset 12px 12px 19px #87000f, inset -12px -12px 19px #ab0013;
   pointer-events: none;
 }
 
 .time-slots .slot.break {
   background-color: #fd6a02;
   color: #fff;
-  -webkit-box-shadow: inset 12px 12px 19px #df5d02, inset -12px -12px 19px #ff7702;
-          box-shadow: inset 12px 12px 19px #df5d02, inset -12px -12px 19px #ff7702;
   pointer-events: none;
 }
 
 .time-slots .slot .time {
-  font-size: 1.4em;
+  font-size: 1.3em;
+}
+
+.time-slots .slot .status {
+  font-size: 0.9em;
 }
 
 .time-slots .slot button {
@@ -72,6 +76,16 @@
   position: relative;
 }
 
+.form-wrapper > div {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form-wrapper > div.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
 .form-wrapper .form {
   position: absolute;
   left: 50%;
@@ -83,13 +97,6 @@
   -ms-grid-columns: 1fr 3fr;
       grid-template-columns: 1fr 3fr;
   justify-items: center;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.form-wrapper .form.active {
-  opacity: 1;
-  pointer-events: all;
 }
 
 .form-wrapper .form .form-img img {
@@ -111,5 +118,33 @@
   padding: 15px 45px;
   cursor: pointer;
   outline: none;
+}
+
+.selected-slot {
+  width: 50vw;
+  text-align: center;
+  margin: auto;
+}
+
+.selected-slot span {
+  font-weight: bold;
+}
+
+.section-three-buttons {
+  width: 50vw;
+  margin: auto;
+}
+
+.section-three-buttons button {
+  font-size: 1em;
+  background-color: #09dca4;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  width: 100%;
+  padding: 15px 45px;
+  cursor: pointer;
+  outline: none;
+  white-space: nowrap;
 }
 /*# sourceMappingURL=index.css.map */

@@ -1,15 +1,19 @@
-const slots = document.querySelectorAll(".slot");
-const time = document.querySelector("input[name='time']");
+const appointment = () => {
+  const slots = document.querySelectorAll(".slot");
+  const time = document.querySelector("input[name='time']");
+  const selectedSlot = document.querySelector(".selected-slot span");
 
-slots.forEach((slot) => {
-  slot.addEventListener("click", () => {
-    const value = slot.getAttribute("value");
-    time.value = value;
+  slots.forEach((slot) => {
+    slot.addEventListener("click", () => {
+      const value = slot.getAttribute("value");
+      time.value = value;
+      selectedSlot.innerText = value;
+    });
   });
-});
+};
 
 const changeSection = (hide, show) => {
-  const sections = document.querySelectorAll(".form");
+  const sections = document.querySelectorAll(".form-wrapper > div");
 
   if (show == 2 && hide == 1) {
     if (
@@ -28,6 +32,8 @@ const changeSection = (hide, show) => {
     ) {
       sections[1].classList.remove("active");
       sections[2].classList.add("active");
+
+      appointment();
     } else {
       alert("Please fill out all the fields!");
     }

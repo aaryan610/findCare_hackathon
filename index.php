@@ -13,21 +13,8 @@
 <body>
     <!--Main Container-->
     <div class="main-container">
-        <header>
-            <nav class="navbar flex flex-ai-c">
-                <h1 class="flex flex-ai-c flex-jc-c">findCare</h1>
-                <ul class="navlinks flex flex-ai-c">
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="#">Find Doctor</a></li>
-                    <li class="appointment"><a href="./register.html">Book Appointment</a></li>
-                </ul>
-                <ul class="hamburger flex">
-                    <li class="lines"></li>
-                    <li class="lines"></li>
-                    <li class="lines"></li>
-                </ul>
-            </nav>
-        </header>
+
+    <?php include('./include/header.html.php'); ?>
 
         <!--cta Secttion-->
         <section class="cta flex">
@@ -36,7 +23,7 @@
                     <h2>Book Your Appointment Today</h2>
                 </div>
                 <div class="cta-buttons">
-                    <button class="btn"><a href="./register.html">Book for OPD</a></button>
+                    <button class="btn"><a href="./opd-appointment">Book for OPD</a></button>
                     <button class="btn"><a href="#">Book for COVID</a></button>
                 </div>
             </div>

@@ -43,6 +43,7 @@
     <div class="main-container">
       <!--Form-->
       <form method="post">
+        <input type="text" name="time" hidden required>
         <div class="form-wrapper">
 
             <!--Section 1-->
@@ -105,8 +106,9 @@
             </div>
 
             <!-- Section 3 -->
-            <div class="form">
+            <div>
             </div>
+
         </div>
       </form>
     </div>
@@ -119,19 +121,19 @@
         //Fetch Time Slots based on Date Selected using AJAX
             function showTimeSlots(date) {
                 if (date == null) {
-                    document.querySelectorAll(".form")[2].innerHTML = "";
+                    document.querySelectorAll(".form-wrapper > div")[2].innerHTML = "";
                     return;
                 } else {
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function() {
                         if (this.readyState == 4 && this.status == 200) {
-                            document.querySelectorAll(".form")[2].innerHTML = this.responseText;
+                            document.querySelectorAll(".form-wrapper > div")[2].innerHTML = this.responseText;
                         }
                     }
                     xmlhttp.open("GET", "timeslots.php?q="+date, true);
                     xmlhttp.send();
                 }
             }
-</script>
+    </script>
 </body>
 </html>

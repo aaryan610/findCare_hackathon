@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal {
+  font-family: "Poppins", sans-serif;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.modal .modal-wrapper {
+  text-align: center;
+  background-color: #fff;
+  color: #000;
+  margin: 0 auto;
+  margin-top: 10vh;
+  width: 80vw;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 10000;
+}
+
+.modal .modal-wrapper .modal-head .modal-header-image img {
+  height: 100px;
+  width: 100px;
+}
+
+.modal .modal-wrapper .modal-head .modal-title {
+  font-size: 1.3em;
+}
+
+.modal .modal-wrapper hr {
+  margin: 1em 0;
+}
+
+.modal .modal-wrapper .modal-body .modal-content {
+  font-size: 1.1em;
+}
+/*# sourceMappingURL=modal.css.map */
