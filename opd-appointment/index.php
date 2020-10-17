@@ -42,7 +42,7 @@
     <!--Main Container-->
     <div class="main-container">
       <!--Form-->
-      <form>
+      <form method="post">
         <div class="form-wrapper">
 
             <!--Section 1-->
@@ -78,11 +78,19 @@
                 </div>
                 <div class="form-content">
                     <div class="input-group">
-                        <select name="department" required>
+                        <select name="department" id="department" required>
                             <option value="">SELECT DEPARTMENT</option>
-                            <option value="ENT">ENT</option>
-                            <option value="Cardiology">Cardiology</option>
-                            <option value="Eye Specialist">Eye Specialist</option>
+
+                            <?php
+                                //Fetch and Display all Departments
+                                    $sql = mysqli_query($con, "SELECT * FROM departments");
+                                    while($row = mysqli_fetch_assoc($sql)) {
+                            ?>
+                                    <option value="<?php echo $row['name']; ?>"></option>
+                            <?php
+                                    }
+                            ?>
+
                         </select>
                     </div>
                     <div class="input-group">
@@ -108,21 +116,22 @@
 
     <script src="./index.js"></script>
     <script>
-        function showTimeSlots(date) {
-            if (date == null) {
-                document.querySelectorAll(".form")[2].innerHTML = "";
-                return;
-            } else {
-                var xmlhttp = new XMLHttpRequest();
-                xmlhttp.onreadystatechange = function() {
-                    if (this.readyState == 4 && this.status == 200) {
-                        document.querySelectorAll(".form")[2].innerHTML = this.responseText;
+        //Fetch Time Slots based on Date Selected using AJAX
+            function showTimeSlots(date) {
+                if (date == null) {
+                    document.querySelectorAll(".form")[2].innerHTML = "";
+                    return;
+                } else {
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                            document.querySelectorAll(".form")[2].innerHTML = this.responseText;
+                        }
                     }
+                    xmlhttp.open("GET", "timeslots.php?q="+date, true);
+                    xmlhttp.send();
                 }
-                xmlhttp.open("GET", "timeslots.php?q="+date, true);
-                xmlhttp.send();
             }
-        }
 </script>
 </body>
 </html>

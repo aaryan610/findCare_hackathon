@@ -6,31 +6,37 @@ slots.forEach((slot) => {
     const value = slot.getAttribute("value");
     time.value = value;
   });
-
-  const status = document.createElement("div");
-  status.setAttribute("class", "status");
-
-  if (slot.classList.contains("available")) {
-    //Add Status
-    status.innerText = "Available";
-
-    //Add Choose Button for Time Slot
-    const button = document.createElement("button");
-    button.setAttribute("type", "button");
-    button.innerText = "CHOOSE";
-    slot.appendChild(button);
-  } else if (slot.classList.contains("break")) {
-    status.innerText = "Break";
-  } else {
-    status.innerText = "Unavailable";
-  }
-
-  slot.appendChild(status);
 });
 
 const changeSection = (hide, show) => {
   const sections = document.querySelectorAll(".form");
 
-  sections[hide - 1].classList.remove("active");
-  sections[show - 1].classList.add("active");
+  if (show == 2 && hide == 1) {
+    if (
+      document.querySelector("#name").value != "" &&
+      document.querySelector("#contactno").value != ""
+    ) {
+      sections[0].classList.remove("active");
+      sections[1].classList.add("active");
+    } else {
+      alert("Please fill out all the fields!");
+    }
+  } else if (show == 3) {
+    if (
+      document.querySelector("#department").value != "" &&
+      document.querySelector("#date").value != ""
+    ) {
+      sections[1].classList.remove("active");
+      sections[2].classList.add("active");
+    } else {
+      alert("Please fill out all the fields!");
+    }
+  } else {
+    sections[hide - 1].classList.remove("active");
+    sections[show - 1].classList.add("active");
+  }
 };
+
+document.querySelectorAll("#department option").forEach((option, index) => {
+  if (index != 0) option.innerText = option.value;
+});
