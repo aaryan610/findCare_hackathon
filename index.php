@@ -19,18 +19,18 @@
     <!-- Header -->
     <header>
         <nav class="navbar flex flex-ai-c">
-          <h1 class="flex flex-ai-c flex-jc-c">findCare</h1>
-          <ul class="navlinks flex flex-ai-c">
-            <li><a href="./">Home</a></li>
-            <li><a href="./opd-appointment">OPD Appointment</a></li>
-            <li><a href="./covid-19">Covid-19 Updates</a></li>
-            <li class="appointment"><a href="./opd-appointment">Book Appointment</a></li>
-          </ul>
-          <ul class="hamburger flex">
-            <li class="lines"></li>
-            <li class="lines"></li>
-            <li class="lines"></li>
-          </ul>
+            <h1 class="flex flex-ai-c flex-jc-c">findCare</h1>
+            <ul class="navlinks flex flex-ai-c">
+                <li><a href="./">Home</a></li>
+                <li><a href="./covid-19">Covid-19</a></li>
+                <li><a href="./opd-appointment">OPD Appointment</a></li>
+                <li class="appointment"><a href="./opd-appointment">Book Appointment</a></li>
+            </ul>
+            <ul class="hamburger">
+                <li class="lines"></li>
+                <li class="lines"></li>
+                <li class="lines"></li>
+            </ul>
         </nav>
     </header>
 
@@ -45,7 +45,7 @@
                 </div>
                 <div class="cta-buttons" style="margin-top: 2em;">
                     <button class="btn"><a href="./opd-appointment">Book for OPD</a></button>
-                    <button class="btn"><a href="./covid-19">Book for COVID</a></button>
+                    <button class="btn"><a href="./covid-19">Information on Covid-19</a></button>
                 </div>
             </div>
             <div class="cta-img cta-items">

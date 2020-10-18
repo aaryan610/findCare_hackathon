@@ -23,15 +23,17 @@
             $row = mysqli_fetch_assoc($query);
     ?>
 
+            <!-- Header -->
             <header>
                 <nav class="navbar flex flex-ai-c">
                     <h1 class="flex flex-ai-c flex-jc-c">findCare</h1>
                     <ul class="navlinks flex flex-ai-c">
-                        <li><a href="../">Home</a></li>
-                        <li><a href="../covid-19">Covid-19 Updates</a></li>
-                        <li class="appointment"><a href="../opd-appointment/">Book Appointment</a></li>
+                        <li><a href="../../">Home</a></li>
+                        <li><a href="../../covid-19">Covid-19</a></li>
+                        <li><a href="../">OPD Appointment</a></li>
+                        <li class="appointment"><a href="../">Book Appointment</a></li>
                     </ul>
-                    <ul class="hamburger flex">
+                    <ul class="hamburger">
                         <li class="lines"></li>
                         <li class="lines"></li>
                         <li class="lines"></li>

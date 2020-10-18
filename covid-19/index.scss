@@ -1,0 +1,79 @@
+@import "../assets/css/style";
+@import "../assets/css/global";
+
+.corona-cta {
+  background-image: url("../assets/images/corona-cta.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.blog-heading {
+  font-family: $heading-font;
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+.corona-blog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1em;
+  margin: 0 1em;
+
+  margin: 3em 1em;
+
+  & > a {
+    transition: 0.2s all ease;
+
+    &:hover {
+      transform: scale(0.95);
+    }
+  }
+
+  .blog-post {
+    box-shadow: 15px 15px 60px #d9d9d9, -15px -15px 60px #ffffff;
+    border-radius: 20px;
+    cursor: pointer;
+    height: 400px;
+    transition: 0.2s all ease;
+
+    .blog-head {
+      img {
+        height: 25vh;
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+    }
+
+    .blog-body {
+      padding: 20px;
+
+      .blog-title {
+        font-size: 1.3em;
+        margin-bottom: 1em;
+      }
+
+      .blog-content {
+        font-size: 0.9em;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .corona-blog {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .corona-blog {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 1em;
+  }
+
+  .blog-heading {
+    font-size: 1.8em;
+  }
+}
