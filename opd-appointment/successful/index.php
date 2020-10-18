@@ -23,7 +23,21 @@
             $row = mysqli_fetch_assoc($query);
     ?>
 
-        <?php include('../../include/header.html.php'); ?>
+            <header>
+                <nav class="navbar flex flex-ai-c">
+                    <h1 class="flex flex-ai-c flex-jc-c">findCare</h1>
+                    <ul class="navlinks flex flex-ai-c">
+                        <li><a href="../">Home</a></li>
+                        <li><a href="../covid-19">Covid-19 Updates</a></li>
+                        <li class="appointment"><a href="../opd-appointment/">Book Appointment</a></li>
+                    </ul>
+                    <ul class="hamburger flex">
+                        <li class="lines"></li>
+                        <li class="lines"></li>
+                        <li class="lines"></li>
+                    </ul>
+                </nav>
+            </header>
 
             <div class="table-container">
                 <h2>Appointment Confirmed</h2>
@@ -60,6 +74,36 @@
                     </tbody>
                 </table>
             </div>
+
+            <!--Footer-->
+            <footer class="footer flex flex-jc-c flex-ai-c">
+                <div class="footer-section section-one">
+                    <h3>findCare</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti velit, labore id ipsa minus recusandae.</p>
+                    <div class="lang-select">
+                        <h4>Language</h4>
+                        <span>English</span>
+                        <span>Hindi</span>
+                    </div>
+                </div>
+                <div class="footer-section section-two">
+                    <h3>For Patients</h3>
+                    <ul>
+                        <li><a href="#">Search for doctors</a></li>
+                        <li><a href="#">Bookings</a></li>
+                        <li><a href="#">Covid-19</a></li>
+                        <li><a href="#">Patient Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section section-three">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>Raipur, Chhattisgrah</li>
+                        <li>+91-7000817013</li>
+                        <li>findcare@gmail.com</li>
+                    </ul>
+                </div>
+            </footer>
             
             <?php session_destroy(); ?>
 

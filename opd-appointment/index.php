@@ -40,7 +40,21 @@
 </head>
 <body>
 
-    <?php include('../include/header.html.php'); ?>
+    <header>
+        <nav class="navbar flex flex-ai-c">
+          <h1 class="flex flex-ai-c flex-jc-c">findCare</h1>
+          <ul class="navlinks flex flex-ai-c">
+            <li><a href="../">Home</a></li>
+            <li><a href="../covid-19">Covid-19 Updates</a></li>
+            <li class="appointment"><a href="./">Book Appointment</a></li>
+          </ul>
+          <ul class="hamburger flex">
+            <li class="lines"></li>
+            <li class="lines"></li>
+            <li class="lines"></li>
+          </ul>
+        </nav>
+    </header>
 
     <!--Main Container-->
     <div class="main-container">
@@ -50,60 +64,64 @@
         <div class="form-wrapper">
 
             <!--Section 1-->
-            <div class="form active">
-                <div class="form-img">
-                    <img
-                        src="../assets/images/undraw_doctor_kw5l.png"
-                        alt="Doctor Image"
-                    />
-                </div>
-                <div class="form-content">
-                    <div class="input-group">
-                        <input type="text" placeholder="Patient's Name" name="name" id="name" />
-                        <label for="name">Patient's Name</label>
+            <div class="active">
+                <div class="form">
+                    <div class="form-img">
+                        <img
+                            src="../assets/images/undraw_doctor_kw5l.png"
+                            alt="Doctor Image"
+                        />
                     </div>
-                    <div class="input-group">
-                        <input type="number" placeholder="Contact No." name="contactno" id="contactno" />
-                        <label for="contactno">Contact No.</label>
-                    </div>
-                    <div class="input-group">
-                        <button type="button" onclick="changeSection(1, 2);">Proceed</button>
+                    <div class="form-content">
+                        <div class="input-group">
+                            <input type="text" placeholder="Patient's Name" name="name" id="name" />
+                            <label for="name">Patient's Name</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="number" placeholder="Contact No." name="contactno" id="contactno" />
+                            <label for="contactno">Contact No.</label>
+                        </div>
+                        <div class="input-group">
+                            <button type="button" onclick="changeSection(1, 2);">Proceed</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!--Section 2-->
-            <div class="form">
-                <div class="form-img">
-                    <img
-                        src="../assets/images/undraw_doctors_hwty.png"
-                        alt="Doctor Image"
-                    />
-                </div>
-                <div class="form-content">
-                    <div class="input-group">
-                        <select name="department" id="department" required>
-                            <option value="">SELECT DEPARTMENT</option>
-
-                            <?php
-                                //Fetch and Display all Departments
-                                    $sql = mysqli_query($con, "SELECT * FROM departments");
-                                    while($row = mysqli_fetch_assoc($sql)) {
-                            ?>
-                                    <option value="<?php echo $row['name']; ?>"></option>
-                            <?php
-                                    }
-                            ?>
-
-                        </select>
+            <div>
+                <div class="form">
+                    <div class="form-img">
+                        <img
+                            src="../assets/images/undraw_doctors_hwty.png"
+                            alt="Doctor Image"
+                        />
                     </div>
-                    <div class="input-group">
-                        <input type="date" placeholder="Appointment Date" name="date" id="date" onchange="showTimeSlots(this.value);" />
-                        <label for="date">Appointment Date</label>
-                    </div>
-                    <div class="input-group half">
-                        <button type="button" onclick="changeSection(2, 1);">Back</button>
-                        <button type="button" onclick="changeSection(2, 3);">Proceed</button>
+                    <div class="form-content">
+                        <div class="input-group">
+                            <select name="department" id="department" required>
+                                <option value="">SELECT DEPARTMENT</option>
+
+                                <?php
+                                    //Fetch and Display all Departments
+                                        $sql = mysqli_query($con, "SELECT * FROM departments");
+                                        while($row = mysqli_fetch_assoc($sql)) {
+                                ?>
+                                        <option value="<?php echo $row['name']; ?>"></option>
+                                <?php
+                                        }
+                                ?>
+
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <input type="date" placeholder="Appointment Date" name="date" id="date" onchange="showTimeSlots(this.value);" />
+                            <label for="date">Appointment Date</label>
+                        </div>
+                        <div class="input-group half">
+                            <button type="button" onclick="changeSection(2, 1);">Back</button>
+                            <button type="button" onclick="changeSection(2, 3);">Proceed</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -115,9 +133,6 @@
         </div>
       </form>
     </div>
-
-    
-
 
     <script src="./index.js"></script>
     <script>

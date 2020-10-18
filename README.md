@@ -20,6 +20,6 @@ Appointment Slip generated can be saved as PDF or can also be printed.
 
 HTML, SCSS, JavaScript
 
-### For Backend
+#### For Backend
 
 php, AJAX, mySQL

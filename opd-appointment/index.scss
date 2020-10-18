@@ -1,6 +1,7 @@
 @import "../assets/css/variables";
 
 .time-slots {
+  margin-top: 5em;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   justify-items: center;
@@ -74,17 +75,16 @@
   position: relative;
 
   & > div {
-    opacity: 0;
-    pointer-events: none;
+    display: none;
 
     &.active {
-      opacity: 1;
-      pointer-events: all;
+      display: block;
     }
   }
 
   .form {
     position: absolute;
+    top: 5em;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -128,8 +128,9 @@
 }
 
 .section-three-buttons {
-  width: 50vw;
-  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 
   button {
     font-size: 1em;
@@ -137,10 +138,27 @@
     border: none;
     border-radius: 2px;
     color: #fff;
-    width: 100%;
+    width: 300px;
     padding: 15px 45px;
     cursor: pointer;
     outline: none;
     white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .form {
+    display: flex !important;
+    justify-content: center !important;
+    width: 140vw !important;
+
+    .form-img {
+      display: none;
+    }
+  }
+
+  .section-three-buttons {
+    flex-direction: column !important;
+    align-items: center !important;
   }
 }
