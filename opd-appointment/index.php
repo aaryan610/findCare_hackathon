@@ -15,7 +15,7 @@
                 $time = sanitize_data($con, $_REQUEST['time']);
 
             //Insertion Query
-                $insert = mysqli_query($con,"INSERT INTO opd_appointments (sno, name, contactno, department, date, time) VALUES ('', '$name', '$contactno', '$department', '$date', '$time')");
+                $insert = mysqli_query($con, "INSERT INTO opd_appointments (sno, name, contactno, department, date, time) VALUES ('', '$name', '$contactno', '$department', '$date', '$time')");
 
             //Confirm Insertion
                 if($insert) {
@@ -162,6 +162,7 @@
     </div>
 
     <script src="./index.js"></script>
+    <script src="../assets/js/app.js"></script>
     <script>
         //Fetch Time Slots based on Date Selected using AJAX
             function showTimeSlots(date) {
