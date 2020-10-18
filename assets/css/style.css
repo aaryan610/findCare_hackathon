@@ -128,7 +128,7 @@ a {
 
 @media screen and (max-width: 768px) {
   .navbar {
-    padding: 0rem 2rem;
+    padding: 0 2rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

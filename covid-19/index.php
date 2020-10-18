@@ -37,6 +37,10 @@
             </nav>
         </header>
 
+        <div class="corona-cta">
+            <h1>The Covid-19 Outbreak</h1>
+        </div>
+
         <h2 class="blog-heading">Blogs on Covid-19</h2>
         <section class="corona-blog">
             <a href="https://www.resmed.com/in/en/consumer/blogs/coronavirus-infection.html" target="_blank">
@@ -73,19 +77,19 @@
                     </div>
                 </div>
             </a>
-            <a href="#">
+            <a href="https://www.geospatialworld.net/blogs/covid-19-has-provoked-data-privacy-issue-todd-mostak-ceo-omnisci/">
                 <div class="blog-post">
                     <div class="blog-head">
                         <div class="blog-image">
-                            <img src="../assets/images/corona-cta.jpg" alt="">
+                            <img src="../assets/images/blog/blog-03.jpg">
                         </div>
                     </div>
                     <div class="blog-body">
                         <p class="blog-title">
-                            COVID-19 push to aerial surveying and mapping
+                            COVID-19 has provoked data privacy issue: Todd Mostak, CEO, OmniSci
                         </p>
                         <p class="blog-content">
-                            Blog COntent
+                            COVID-19 has provoked a lot of conversations around data privacy framed as, “what if we erode privacy rights in exchange for the greater good of protecting human life and reopening the economy?,” says Todd Mostak, CEO of OmniSci in an exclusive conversation with Geospatial World.
                         </p>
                     </div>
                 </div>
@@ -131,32 +135,26 @@
 
         </section>
 
-        <!--footer-->
+        <!-- Footer -->
         <footer class="footer flex flex-jc-c flex-ai-c">
             <div class="footer-section section-one">
                 <h3>findCare</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti velit, labore id ipsa minus recusandae.</p>
-                <div class="lang-select">
-                    <h4>Language</h4>
-                    <span>English</span>
-                    <span>Hindi</span>
-                </div>
             </div>
             <div class="footer-section section-two">
                 <h3>For Patients</h3>
                 <ul>
-                    <li><a href="#">Search for doctors</a></li>
-                    <li><a href="#">Bookings</a></li>
-                    <li><a href="#">Covid-19</a></li>
-                    <li><a href="#">Patient Dashboard</a></li>
+                    <li><a href="../#specialities">Our Specialities</a></li>
+                    <li><a href="../#facilities">Facilities Provided</a></li>
+                    <li><a href="../opd-appointment">ODP Appointment</a></li>
+                    <li><a href="./">Covid-19</a></li>
                 </ul>
             </div>
             <div class="footer-section section-three">
                 <h3>Contact Us</h3>
                 <ul>
-                    <li>Raipur, Chhattisgrah</li>
-                    <li>+91-7000817013</li>
-                    <li>findcare@gmail.com</li>
+                    <li><a href="tel:+918103445828">+91-8103445828</a></li>
+                    <li><a href="mailto:techeffin@gmail.com">techeffin@gmail.com</a></li>
                 </ul>
             </div>
         </footer>

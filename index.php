@@ -105,8 +105,8 @@
             </div>
             <div class="facilities-content">
                 <div class="facilities-text">
-                    <h2>Available facilities in our clinic</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <h2>Available facilities in our Clinic</h2>
+                    <p>We can serve you in every possible way</p>
                 </div>
                 <div class="facilities-carousel flex flex-ai-c">
                     <div class="owl-carousel">
@@ -114,19 +114,19 @@
                             <div class="img">
                                 <img src="./assets/images/features/feature-01.jpg" alt="facilities">
                             </div>
-                            <p>Urology</p>
+                            <p>Operations</p>
                         </div>
                         <div class="facilities-carousel-item">
                             <div class="img">
                                 <img src="./assets/images/features/feature-02.jpg" alt="facilities">
                             </div>
-                            <p>Urology</p>
+                            <p>Medical</p>
                         </div>
                         <div class="facilities-carousel-item">
                             <div class="img">
                                 <img src="./assets/images/features/feature-03.jpg" alt="facilities">
                             </div>
-                            <p>Urology</p>
+                            <p>Test Room</p>
                         </div>
                     </div>
                 </div>
@@ -144,7 +144,7 @@
                 <ul>
                     <li><a href="#specialities">Our Specialities</a></li>
                     <li><a href="#facilities">Facilities Provided</a></li>
-                    <li><a href="./odp-appointment">ODP Appointment</a></li>
+                    <li><a href="./opd-appointment">ODP Appointment</a></li>
                     <li><a href="./covid-19">Covid-19</a></li>
                 </ul>
             </div>

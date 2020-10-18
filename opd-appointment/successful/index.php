@@ -77,32 +77,26 @@
                 </table>
             </div>
 
-            <!--Footer-->
+            <!-- Footer -->
             <footer class="footer flex flex-jc-c flex-ai-c">
                 <div class="footer-section section-one">
                     <h3>findCare</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti velit, labore id ipsa minus recusandae.</p>
-                    <div class="lang-select">
-                        <h4>Language</h4>
-                        <span>English</span>
-                        <span>Hindi</span>
-                    </div>
                 </div>
                 <div class="footer-section section-two">
                     <h3>For Patients</h3>
                     <ul>
-                        <li><a href="#">Search for doctors</a></li>
-                        <li><a href="#">Bookings</a></li>
-                        <li><a href="#">Covid-19</a></li>
-                        <li><a href="#">Patient Dashboard</a></li>
+                        <li><a href="../../#specialities">Our Specialities</a></li>
+                        <li><a href="../../#facilities">Facilities Provided</a></li>
+                        <li><a href="../">ODP Appointment</a></li>
+                        <li><a href="../../covid-19">Covid-19</a></li>
                     </ul>
                 </div>
                 <div class="footer-section section-three">
                     <h3>Contact Us</h3>
                     <ul>
-                        <li>Raipur, Chhattisgrah</li>
-                        <li>+91-7000817013</li>
-                        <li>findcare@gmail.com</li>
+                        <li><a href="tel:+918103445828">+91-8103445828</a></li>
+                        <li><a href="mailto:techeffin@gmail.com">techeffin@gmail.com</a></li>
                     </ul>
                 </div>
             </footer>

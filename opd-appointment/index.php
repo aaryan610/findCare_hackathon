@@ -144,10 +144,10 @@
         <div class="footer-section section-two">
             <h3>For Patients</h3>
             <ul>
-                <li><a href="#specialities">Our Specialities</a></li>
-                <li><a href="#facilities">Facilities Provided</a></li>
-                <li><a href="./odp-appointment">ODP Appointment</a></li>
-                <li><a href="./covid-19">Covid-19</a></li>
+                <li><a href="../#specialities">Our Specialities</a></li>
+                <li><a href="../#facilities">Facilities Provided</a></li>
+                <li><a href="./">ODP Appointment</a></li>
+                <li><a href="../covid-19">Covid-19</a></li>
             </ul>
         </div>
         <div class="footer-section section-three">

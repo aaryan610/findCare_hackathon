@@ -2,9 +2,22 @@
 @import "../assets/css/global";
 
 .corona-cta {
+  position: relative;
   background-image: url("../assets/images/corona-cta.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  height: 40vh;
+  margin: 2em 0 3em;
+
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 2em;
+    transform: translateY(-50%);
+    font-family: $heading-font;
+    color: #fff;
+    font-size: 2.4em;
+  }
 }
 
 .blog-heading {
