@@ -64,11 +64,18 @@ a {
   font-weight: 500;
 }
 
-.navlinks li:nth-of-type(2) {
+.navlinks li:nth-of-type(2),
+.navlinks li:nth-of-type(3) {
   margin-left: 1.5rem;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
 }
 
-.navlinks li:nth-of-type(3) {
+.navlinks li:hover a {
+  color: #09dca4;
+}
+
+.navlinks li:nth-of-type(4) {
   margin-left: auto;
   border: 2px solid #09dca4;
   border-radius: 4px;
@@ -77,15 +84,15 @@ a {
   transition: 0.2s all ease;
 }
 
-.navlinks li:nth-of-type(3) a {
+.navlinks li:nth-of-type(4) a {
   color: #09dca4;
 }
 
-.navlinks li:nth-of-type(3):hover {
+.navlinks li:nth-of-type(4):hover {
   background-color: #09dca4;
 }
 
-.navlinks li:nth-of-type(3):hover a {
+.navlinks li:nth-of-type(4):hover a {
   color: white;
 }
 
@@ -162,15 +169,12 @@ a {
   border-radius: 3px;
   -webkit-transition: 0.2s all ease;
   transition: 0.2s all ease;
+  outline: none;
 }
 
 .cta-buttons .btn a {
   color: #536dfe;
   font-weight: 500;
-}
-
-.cta-buttons .btn:focus {
-  outline: none;
 }
 
 .cta-buttons .btn:hover {
@@ -187,7 +191,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 3rem 4rem;
+  padding: 3em 4em;
 }
 
 .clinic-child {
@@ -195,7 +199,7 @@ a {
 }
 
 .clinic-child:nth-of-type(1) {
-  height: 40%;
+  height: 30%;
 }
 
 .clinic-child:nth-of-type(2) {
@@ -223,8 +227,10 @@ a {
           flex-direction: column;
   width: 200px;
   height: 200px;
-  border-radius: 100px;
-  margin: 10px 20px;
+  -webkit-box-shadow: 4px 4px 8px #cecece;
+          box-shadow: 4px 4px 8px #cecece;
+  border-radius: 50%;
+  margin: 10px 10em;
   -webkit-transition: 0.2s all ease-in;
   transition: 0.2s all ease-in;
 }
@@ -257,6 +263,10 @@ a {
   height: 100%;
 }
 
+.facilities-text {
+  text-align: center;
+}
+
 .facilities-text h2 {
   font-size: 2.4rem;
   font-family: "Poppins", sans-serif;
@@ -264,6 +274,7 @@ a {
 
 .facilities-text p {
   font-size: 1.2rem;
+  color: #a0a0a0;
 }
 
 .facilities-carousel {
@@ -279,8 +290,8 @@ a {
 }
 
 .facilities-carousel-item img {
-  width: 140px;
-  height: 140px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
 }
 
@@ -309,6 +320,49 @@ a {
   }
   .cta-text h2 {
     font-size: 2rem;
+  }
+  .clinic {
+    padding: 1rem 2rem;
+  }
+  .clinic-child {
+    width: 100%;
+  }
+  .clinic-text h2 {
+    font-size: 1.8rem;
+  }
+  .clinic-text p {
+    font-size: 1rem;
+  }
+  .facilities {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .facilities-img {
+    width: 100%;
+  }
+  .facilities-text {
+    margin-top: 2em;
+  }
+  .facilities-text h2 {
+    font-size: 1.8rem;
+  }
+  .facilities-text p {
+    font-size: 1rem;
+  }
+  .facilities-content {
+    width: 100%;
+  }
+  .facilities-carousel-item {
+    margin-top: 5em;
+  }
+  .facilities-carousel-item img {
+    width: 80% !important;
+    height: 80% !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

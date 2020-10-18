@@ -22,6 +22,7 @@
           <h1 class="flex flex-ai-c flex-jc-c">findCare</h1>
           <ul class="navlinks flex flex-ai-c">
             <li><a href="./">Home</a></li>
+            <li><a href="./opd-appointment">OPD Appointment</a></li>
             <li><a href="./covid-19">Covid-19 Updates</a></li>
             <li class="appointment"><a href="./opd-appointment">Book Appointment</a></li>
           </ul>
@@ -33,7 +34,7 @@
         </nav>
     </header>
 
-    <!--Main Container-->
+    <!-- Main Container -->
     <div class="main-container">
 
         <!--cta Secttion-->
@@ -42,9 +43,9 @@
                 <div class="cta-text">
                     <h2>Book Your Appointment Today</h2>
                 </div>
-                <div class="cta-buttons">
+                <div class="cta-buttons" style="margin-top: 2em;">
                     <button class="btn"><a href="./opd-appointment">Book for OPD</a></button>
-                    <button class="btn"><a href="#">Book for COVID</a></button>
+                    <button class="btn"><a href="./covid-19">Book for COVID</a></button>
                 </div>
             </div>
             <div class="cta-img cta-items">
@@ -141,19 +142,39 @@
 
     <script>
         $(".clinic-carousel .owl-carousel").owlCarousel({
-            items: 4,
             loop: true,
             dots: true,
             autoplay: true,
             autoplayTimeout: 1500,
+            responsive: {
+                0: {
+                    items: 2,
+                },
+                768: {
+                    items: 2,
+                },
+                992: {
+                    items: 4,
+                }
+            }
         });
         
         $(".facilities-carousel .owl-carousel").owlCarousel({
-            items: 4,
             loop: true,
             dots: true,
             autoplay: true,
             autoplayTimeout: 1500,
+            responsive: {
+                0: {
+                    items: 2,
+                },
+                768: {
+                    items: 2,
+                },
+                992: {
+                    items: 4,
+                }
+            }
         });
     </script>
 </body>

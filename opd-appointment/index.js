@@ -46,3 +46,22 @@ const changeSection = (hide, show) => {
 document.querySelectorAll("#department option").forEach((option, index) => {
   if (index != 0) option.innerText = option.value;
 });
+
+const setMinDate = () => {
+  let today = new Date();
+  let dd = today.getDate();
+  let mm = today.getMonth() + 1;
+  const yyyy = today.getFullYear();
+
+  if (dd < 10) {
+    dd = "0" + dd;
+  }
+  if (mm < 10) {
+    mm = "0" + mm;
+  }
+
+  today = dd + "-" + mm + "-" + yyyy;
+  document.querySelector("input[type='date']").setAttribute("min", today);
+  alert(today);
+};
+setMinDate();

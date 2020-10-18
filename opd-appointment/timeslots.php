@@ -6,7 +6,13 @@
 
         $date = sanitize_data($con, $_GET['q']);
 
-        echo "<div class='time-slots'>";
+        $res = explode("-", $date);
+        $newDate = $res[2]."-".$res[1]."-".$res[0];
+
+        echo "
+            <div class='for-date'><p>Time Slots for "  . $newDate . "</p></div>  
+            <div class='time-slots'>      
+        ";
 
             //First Time
                 $hours = 10;
